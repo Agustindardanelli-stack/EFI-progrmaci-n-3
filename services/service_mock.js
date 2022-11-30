@@ -11,6 +11,7 @@ async function login(credential) {
         if (loged) {
             return credential.email ;
         } else {
+            alert("Los datos ingresados son incorrectos")
             return ''
         }
     } catch(e){
