@@ -3,7 +3,6 @@ import SelectLanguage from './Lang'
 import { LanguageContext } from '../context/Context'
 import { langtranslate } from '../locales/chooseLang'
 import {AuthContext} from '../context/AuthContext'
-
 import Link from 'next/link'
 
 export default function Header() {
@@ -38,10 +37,10 @@ export default function Header() {
       </Link>
       <nav>
         <section className='MOBILE-MENU flex lg:hidden'>
-          <div className='HAMBURGER-ICON space-y-2 mx-10' onClick={() => setIsNavOpen((prev) => !prev)}>
-            <span className='block h-0.5 w-8 animate-pulse bg-gray-500'></span>
-            <span className='block h-0.5 w-8 animate-pulse bg-gray-500'></span>
-            <span className='block h-0.5 w-8 animate-pulse bg-gray-500'></span>
+          <div className='HAMBURGER-ICON space-y-2' onClick={() => setIsNavOpen((prev) => !prev)}>
+            <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
+            <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
+            <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
           </div>
           <div className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
             <div
@@ -99,7 +98,7 @@ export default function Header() {
         <ul className='DESKTOP-MENU hidden space-x-8 lg:flex mr-20'>
           {isLogged && <li className='ml-2'>
             <button className='bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full'>
-               <Link href={'/Materias'}>{textsLanguage.asignature}</Link>
+              <Link href={'/Materias'}>{textsLanguage.asignature}</Link>
             </button>
           </li>}
           <li>
